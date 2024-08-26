@@ -11,9 +11,9 @@ Route::get('/dashboard', function () {
     return view('portfolio.index');
 });
 
-Route::get('/chatbot', function () {
-    return view('chatbot.index');
-});
+// Route::get('/biodata', function () {
+//     return view('biodata.index');
+// });
 
 Auth::routes();
 
@@ -27,5 +27,9 @@ Route::group(['prefix'=> 'search'], function () {
 });
 
 Route::post('/response', [App\Http\Controllers\GeminiAIController::class, 'handleChat'])->name('chat');
+Route::resource('/chatbot', App\Http\Controllers\GeminiAIController::class);
+Route::resource('/biodata', App\Http\Controllers\BiodataController::class);
+
+
 // Route::get('/search', [App\Http\Controllers\UserController::class, 'searchUser']);
 // Route::get('/id/{user}', [App\Http\Controllers\UserController::class, 'findUser']);
