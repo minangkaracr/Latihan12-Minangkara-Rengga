@@ -30,6 +30,8 @@ Route::post('/response', [App\Http\Controllers\GeminiAIController::class, 'handl
 Route::resource('/chatbot', App\Http\Controllers\GeminiAIController::class);
 Route::resource('/biodata', App\Http\Controllers\BiodataController::class);
 
+Route::get('/admin', [App\Http\Controllers\KategoriController::class,'index']);
+
 
 // Route::get('/search', [App\Http\Controllers\UserController::class, 'searchUser']);
 // Route::get('/id/{user}', [App\Http\Controllers\UserController::class, 'findUser']);

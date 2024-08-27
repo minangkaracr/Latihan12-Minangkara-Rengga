@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nik');
             $table->integer('umur');
             $table->string('alamat');
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

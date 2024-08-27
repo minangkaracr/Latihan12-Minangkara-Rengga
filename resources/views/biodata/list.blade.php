@@ -50,6 +50,7 @@
                                 <th scope="col">NIK</th>
                                 <th scope="col">Umur</th>
                                 <th scope="col">Alamat</th>
+                                <th scope="col">Image</th>
                                 <th scope="col">Action</th>
                               </tr>
                             </thead>
@@ -61,6 +62,7 @@
                                 <td>{{ $item->nik }}</td>
                                 <td>{{ $item->umur }} Tahun</td>
                                 <td>{{ $item->alamat }}</td>
+                                <td><img src="{{ asset('storage/images/'.$item->image_path) }}" alt="Uploaded image" style="max-width: 100px;"></td>
                                 <td>
                                     <div class="row">
                                         <div class="col-3">

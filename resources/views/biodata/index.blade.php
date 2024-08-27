@@ -43,7 +43,7 @@
                         @endforeach
                     </div> --}}
                     <div class="container" style="padding-bottom: 20px; margin-top: 10px">
-                        <form action="{{ route('biodata.store') }}" method="POST">
+                        <form action="{{ route('biodata.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="name" id="name"><b>Name</b></label>
@@ -60,6 +60,10 @@
                             <div class="form-group mb-3">
                                 <label for="alamat" id="alamat"><b>Alamat</b></label>
                                 <input type="text" class="form-control" id="alamat" name="alamat" placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="image" id="image"><b>Image</b></label>
+                                <input type="file" class="form-control" id="image" name="image" placeholder="">
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-primary col-12" id="submitBtn3" name="tambah" value="create" style="#0085ff !important;">Submit</button>

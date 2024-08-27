@@ -44,7 +44,7 @@
                         @endforeach
                     </div> --}}
                     <div class="container" style="padding-bottom: 20px; margin-top: 10px">
-                        <form action="{{ route('biodata.update', $biodata->id) }}" method="POST">
+                        <form action="{{ route('biodata.update', $biodata->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group mb-3">
